@@ -1,8 +1,10 @@
-// Endpoints segmentados por pestaña de SheetDB
-const API_BASE_REGISTRO = 'https://sheetdb.io/api/v1/uqbm96dji3sqz?sheet=BASE DE REGISTRO';
-const API_CLIENTES = 'https://sheetdb.io/api/v1/uqbm96dji3sqz?sheet=CLIENTES';
-const API_PRODUCTO = 'https://sheetdb.io/api/v1/uqbm96dji3sqz?sheet=PRODUCTO';
-const API_UM = 'https://sheetdb.io/api/v1/uqbm96dji3sqz?sheet=UM';
+// ==========================================================================
+// NUEVOS ENDPOINTS ACTUALIZADOS CON LA NUEVA RUTA DE SHEETDB
+// ==========================================================================
+const API_BASE_REGISTRO = 'https://sheetdb.io/api/v1/u8ium9e4hsm22?sheet=BASE DE REGISTRO';
+const API_CLIENTES = 'https://sheetdb.io/api/v1/u8ium9e4hsm22?sheet=CLIENTES';
+const API_PRODUCTO = 'https://sheetdb.io/api/v1/u8ium9e4hsm22?sheet=PRODUCTO';
+const API_UM = 'https://sheetdb.io/api/v1/u8ium9e4hsm22?sheet=UM';
 
 const CREDENCIALES = { user: 'admin', pass: 'rediplast2026' };
 
