@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial Maestro de Lotes - Rediplast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dashboard-page">
+
+    <script>
+        if (localStorage.getItem('rediplast_admin_session') !== 'active') { window.location.href = 'login.html'; }
+    </script>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-brand">
+                <img src="img/logo.jpg" alt="Rediplast" class="header-logo">
+                <span class="badge-app" style="background-color: #d97706;">Área de Auditoría</span>
+            </div>
+            <div class="header-right">
+                <div class="search-box">
+                    <input type="text" id="buscadorAvanzado" placeholder="🔍 Buscar por Medida, Lote o Cliente...">
+                </div>
+                <button class="btn-logout" onclick="cerrarSesionAdmin()">Cerrar Sesión 🚪</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="dashboard-layout" style="grid-template-columns: 1fr; padding: 24px;">
+        <div class="card card-table">
+            <div class="table-header-actions">
+                <h3>Base Histórica de Registros Guardados</h3>
+                <button class="btn btn-secondary" onclick="window.location.href='dashboard.html'">⬅️ Volver a
+                    Captura</button>
+            </div>
+            <div class="contenedor-tabla">
+                <table id="tablaLotesHistorial">
+                    <thead>
+                        <tr>
+                            <th>PRODUCTO</th>
+                            <th>MEDIDA</th>
+                            <th>LOTE</th>
+                            <th>FECHA P.</th>
+                            <th>CANTIDAD</th>
+                            <th>UM</th>
+                            <th>PESO</th>
+                            <th>BULTO</th>
+                            <th>CLIENTE</th>
+                            <th>FECHA R.</th>
+                            <th>CORRELATIVO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbodyHistorial">
+                        <!-- Inyección reactiva mediante app.js -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

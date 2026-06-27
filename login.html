@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Área Restringida - Autenticación</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="login-page">
+    <div class="login-card">
+        <div class="login-logo-container">
+            <img src="img/logo.jpg" alt="Rediplast" class="brand-logo">
+        </div>
+        <p
+            style="color: var(--alert-text); background: var(--alert-bg); padding: 8px; border-radius: 6px; font-size: 0.8rem; font-weight: 600; margin-bottom: 20px;">
+            ⚠️ REQUIERE LLAVE DE ACCESO RESTRINGIDO
+        </p>
+
+        <form id="formAccesoPrivado">
+            <div class="input-group">
+                <span class="input-addon">👤</span>
+                <input type="text" id="privUsuario" placeholder="USUARIO" required autocomplete="off">
+            </div>
+            <div class="input-group">
+                <span class="input-addon">🔒</span>
+                <input type="password" id="privContrasena" placeholder="CONTRASEÑA" required>
+            </div>
+            <button type="submit" class="btn-login">VALIDAR CREDENCIALES</button>
+        </form>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

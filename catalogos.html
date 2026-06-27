@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuración de Catálogos - Rediplast</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dashboard-page">
+
+    <script>
+        if (localStorage.getItem('rediplast_admin_session') !== 'active') { window.location.href = 'login.html'; }
+    </script>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-brand">
+                <img src="img/logo.jpg" alt="Rediplast" class="header-logo">
+                <span class="badge-app">Configuración de Maestros</span>
+            </div>
+            <button class="btn btn-secondary" onclick="window.location.href='dashboard.html'">⬅️ Panel de
+                Captura</button>
+        </div>
+    </header>
+
+    <main class="dashboard-layout" style="padding: 24px;">
+        <div class="card full-width">
+            <h3>Añadir Nuevas Opciones Operativas (Pestañas Independientes)</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;">Cada campo se registrará
+                directamente en su respectiva pestaña del archivo Excel de forma independiente y ordenada.</p>
+
+            <form id="formNuevoDato"
+                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div class="form-group">
+                    <label for="catProducto">Nuevo Producto</label>
+                    <input type="text" id="catProducto" placeholder="Ej: MANGA B/D TRANSPARENTE">
+                </div>
+                <div class="form-group">
+                    <label for="catUM">Nueva U.M.</label>
+                    <input type="text" id="catUM" placeholder="Ej: PAQUETE">
+                </div>
+                <div class="form-group">
+                    <label for="catCliente">Nuevo Cliente</label>
+                    <input type="text" id="catCliente" placeholder="Ej: INDUSTRIES PERU S.A.C.">
+                </div>
+                <button type="submit" class="btn btn-primary" style="grid-column: 1 / -1;">⚙️ INYECTAR NUEVOS VALORES AL
+                    EXCEL</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

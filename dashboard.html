@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Lotes Masivo - Rediplast</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="dashboard-page">
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="header-brand">
+                <img src="img/logo.jpg" alt="Rediplast" class="header-logo">
+                <span class="badge-app">Captura de Datos</span>
+            </div>
+            <h2>REGISTRO DE LOTES</h2>
+        </div>
+    </header>
+
+    <main class="matrix-container">
+        <!-- Campos Maestros de Cabecera -->
+        <div class="card matrix-meta">
+            <div class="meta-row">
+                <div class="form-group">
+                    <label for="masterCliente">Cliente Receptor</label>
+                    <input type="text" id="masterCliente" list="lista-clientes"
+                        placeholder="Escribe para buscar cliente..." required>
+                    <datalist id="lista-clientes"></datalist>
+                </div>
+                <div class="form-group">
+                    <label for="masterFechaR">Fecha de Recepción (Fecha R.)</label>
+                    <input type="date" id="masterFechaR" required>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tabla de Captura Multilínea -->
+        <div class="card matrix-card">
+            <div class="contenedor-tabla">
+                <table id="tablaMatrizLotes">
+                    <thead>
+                        <tr>
+                            <th style="width: 25%;">PRODUCTO</th>
+                            <th style="width: 10%;">MEDIDA</th>
+                            <th style="width: 10%;">LOTE</th>
+                            <th style="width: 14%;">FECHA PROD.</th>
+                            <th style="width: 9%;">CANTIDAD</th>
+                            <th style="width: 12%;">U.M.</th>
+                            <th style="width: 10%;">PESO (KG)</th>
+                            <th style="width: 8%;">BULTO</th>
+                            <th style="width: 12%;">CORRELATIVO</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyMatriz">
+                        <!-- Las filas dinámicas se inyectan mediante app.js -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="matrix-actions">
+                <button type="button" class="btn btn-secondary" onclick="agregarFilaMatriz()">➕ Añadir Fila</button>
+                <button type="button" class="btn btn-primary" onclick="guardarMatrizAExcel()">💾 GRABAR
+                    REGISTROS</button>
+            </div>
+        </div>
+
+        <!-- Menú de Navegación Inferior -->
+        <footer class="dashboard-footer-nav">
+            <button class="btn nav-link-btn" onclick="solicitarAccesoRuta('historial.html')">📊 HISTORIAL
+                REGISTRO</button>
+            <button class="btn nav-link-btn" onclick="solicitarAccesoRuta('catalogos.html')">🛠️ REGISTRAR NUEVO
+                DATO</button>
+        </footer>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
